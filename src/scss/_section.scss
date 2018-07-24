@@ -1,0 +1,22 @@
+.section {
+  &__wrapper {
+    &_grey {
+      margin-top: 115px;
+      padding-top: 80px;
+      background-color: #FBFBFB;
+      padding-bottom: 80px;
+    }
+    &_bottom {
+      margin-top: 0px;
+    }
+    &_clients {
+      margin-top: 0px;
+      padding-top: 50px;
+    }
+    &_dark {
+      padding-top: 80px;
+      background-color: #20252E;
+      padding-bottom: 80px;
+    }
+  }
+}

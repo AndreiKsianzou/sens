@@ -1,0 +1,32 @@
+.main-box {
+  &__wrapper {
+    margin-top: 86px;
+    margin-left: -15px;
+    margin-right: -15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  &__button {
+    max-width: 144px;
+  }
+  &__item {
+    width: calc(50% - 30px);
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  &__title {
+    margin-top: 185px;
+    font-size: 44px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  &__caption {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  &__img {
+    margin-top: 60px;
+    margin-left: 30px;
+  }
+}

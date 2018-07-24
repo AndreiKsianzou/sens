@@ -1,0 +1,10 @@
+<svg width="44" height="402" viewBox="0 0 44 402" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line y1="-0.5" x2="362" y2="-0.5" transform="translate(22 34) rotate(90)" stroke="#E5E5E5"/>
+<circle cx="22" cy="22" r="22" fill="#EB5757"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.707031 0L0 0.655396L9 9L18 0.655396L17.293 0L9 7.68921L0.707031 0Z" transform="translate(13 19)" fill="white"/>
+<circle cx="6" cy="6" r="6" transform="translate(16 94)" fill="#EB5757"/>
+<circle cx="6" cy="6" r="6" transform="translate(16 168)" fill="#EB5757"/>
+<circle cx="6" cy="6" r="6" transform="translate(16 242)" fill="#EB5757"/>
+<circle cx="6" cy="6" r="6" transform="translate(16 390)" fill="#EB5757"/>
+<circle cx="6" cy="6" r="6" transform="translate(16 316)" fill="#EB5757"/>
+</svg>

@@ -1,17 +1,14 @@
 .footer {
   &__wrapper {
-    margin-bottom: 25px;
+    background-color: #272c34;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
-  &__copyright {
-    text-align: center;
-    font-size: 18px;
-    font-family: 'Roboto mono';
-    font-weight: 300;
+  &__box {
+    display: flex;
+    justify-content: space-between;
   }
-  &__hire {
-    max-width: 200px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    font-size: 20px;
+  &__item {
+    color: #fff;
   }
 }
