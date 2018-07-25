@@ -29,11 +29,18 @@
     align-items: center;
     padding-left: 15px;
     padding-right: 15px;
+    &_active {
+      .number-list__icon {
+        opacity: 1;
+      }
+    }
   }
   &__icon {
     font-size: 100px;
     color: $color_pink;
     margin-right: 30px;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
   }
   &__text {
     strong {

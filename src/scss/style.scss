@@ -24,6 +24,14 @@ $color_blue: #57B6EB;
   }
 }
 
+.logo {
+  height: 33px;
+  width: 123px;
+  background-image: url(../img/logo-white.svg);
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
 
 @import "./_reset.scss";
 @import "./_container.scss";
@@ -62,11 +70,5 @@ body {
   margin: 0 auto;
 }
 
-.logo {
-  height: 33px;
-  width: 123px;
-  background-image: url(../img/logo-white.svg);
-  margin: 0 auto;
-  margin-bottom: 80px;
-}
+
 

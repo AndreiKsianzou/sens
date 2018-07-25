@@ -31,7 +31,7 @@ export function drawLines() {
       let el_line = el.querySelector('.step-line__points');
       let el_title = el.querySelector('.step-line__title');
       let el_items = el.querySelectorAll('.step-line__item');
-      if (scrollTop + 0.7*window_height >= el_top && scrollTop + 0.7*window_height < el_top + el_height) {
+      if (scrollTop + 0.7*window_height >= el_top /* && scrollTop + 0.7*window_height < el_top + el_height */) {
         if (!el_title.classList.contains('step-line__title_active')) {
           el_title.classList.add('step-line__title_active');
         }
