@@ -11,7 +11,7 @@
 <body>
 <%= _.template(require('./../includes/header.html'))(data) %> 
 <section class="section">
-  <div class="section__wrapper">
+  <div class="section__wrapper" id="about">
     <div class="container">
       <div class="main-box">
         <div class="main-box__wrapper">
@@ -24,7 +24,7 @@
             </div>
             <div class="main-box__button">
               <div class="button">
-                <a href="#" class="button__wrapper">Connect</a>
+                <a href="#contacts" class="button__wrapper">Connect</a>
               </div>
             </div>
           </div>
@@ -110,7 +110,7 @@
   </div>
 </section>
 <section class="section">
-  <div class="section__wrapper">
+  <div class="section__wrapper" id="aplication">
     <div class="container">
       <div class="box">
         <div class="box__wrapper box__wrapper_part">
@@ -469,7 +469,7 @@
   </div>
 </section>
 <section class="section">
-  <div class="section__wrapper section__wrapper_grey section__wrapper_clients">
+  <div class="section__wrapper section__wrapper_grey section__wrapper_clients" id="clients">
     <div class="container">
       <div class="clients">
         <div class="clients__wrapper">
@@ -493,7 +493,7 @@
   </div>
 </section>
 <section class="section">
-  <div class="section__wrapper section__wrapper_dark">
+  <div class="section__wrapper section__wrapper_dark" id="contacts">
     <div class="container">
       <div class="logo"></div>
       <div class="form">
@@ -502,19 +502,22 @@
             <span>Any questions? Just write us</span>
           </div>
           <form action="#" class="form__form">
-            <div class="form__item">
-              <input type="text" class="form__input" placeholder="Name">
+            <div class="form__item form__item_req">
+              <input type="text" name="name" class="form__input form__req" placeholder="Name">
+              <div class="form__error"></div>
             </div>
-            <div class="form__item">
-              <input type="text" class="form__input" placeholder="Email">
+            <div class="form__item form__item_req">
+              <input type="text" name="email" class="form__input form__req" placeholder="Email">
+              <div class="form__error"></div>
             </div>
-            <div class="form__item">
-              <textarea class="form__textarea" placeholder="Message"></textarea>
+            <div class="form__item form__item_req">
+              <textarea name="message" class="form__textarea form__req" placeholder="Message"></textarea>
+              <div class="form__error"></div>
             </div>
             <div class="form__item">
               <div class="form__button">
                 <div class="button">
-                  <button class="button__wrapper">Send</button>
+                  <input type="submit" class="button__wrapper" value="Send">
                 </div>
               </div>
             </div>

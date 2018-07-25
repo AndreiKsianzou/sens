@@ -1,7 +1,8 @@
 import { menuFloating } from './menu';
-import { drawLines } from './line';
+import { drawLines, getCoords } from './line';
 import { efStart, erStart } from './ef';
 import { numberStart } from './number';
+import { submitForm } from './form';
 
 menuFloating();
 drawLines();
@@ -25,11 +26,49 @@ function closeTitle() {
   } 
 }
 
+function fixMenu() {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  let navMenu = document.querySelector('.header__navigation');
+  let navTop = 85;
+  if (scrollTop >= navTop && !navMenu.classList.contains('header__navigation_fixed')) {
+    navMenu.classList.add('header__navigation_fixed');
+    menuFloating();
+  } else if (scrollTop < navTop && navMenu.classList.contains('header__navigation_fixed')) {
+    navMenu.classList.remove('header__navigation_fixed');
+    menuFloating();
+  }
+}
+
 
 window.addEventListener('resize', (e) => {
   closeTitle();
+  
 });
 
 document.addEventListener('DOMContentLoaded', (e) => {
   closeTitle();
+  fixMenu();
+});
+
+window.addEventListener('scroll', (e) => {
+  fixMenu();
+});
+
+let form = document.querySelector('.form__form');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  submitForm(e.target);
+});
+
+let formItems = form.querySelectorAll('.form__item_req');
+formItems.forEach((item) => {
+  let input = item.querySelector('.form__req');
+  let inputValue = input.value;
+  let errorBox = item.querySelector('.form__error');
+  input.addEventListener('focus', (e) => {
+    item.classList.remove('form__item_error');
+    errorBox.classList.remove('form__error_active');
+    errorBox.innerHTML = '';
+  });
 });

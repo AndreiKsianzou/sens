@@ -19,7 +19,8 @@ time, mark, audio, video {
 }
 
 html {
-  	line-height: 1;
+    line-height: 1;
+    scroll-behavior: smooth; 
 }
 a {
 	transition: all 0.5s ease 0s;

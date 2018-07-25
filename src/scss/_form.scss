@@ -1,6 +1,5 @@
 .form {
   &__wrapper {
-
   }
   &__caption {
     color: #A7A7A7;
@@ -15,31 +14,61 @@
   &__item {
     margin-bottom: 20px;
     width: 100%;
+    &_error {
+      .form__req {
+        border: 1px solid #E83131;
+      }
+    }
+    &_req {
+      position: relative;
+    }
   }
   &__input {
     width: 100%;
     background-color: #fff;
-    color: rgba(0, 0, 0, 0.15);
+    color: rgba(10, 30, 56, 0.8);
     border-radius: 5px;
-    height: 46px;
-    border: none;
+    height: 44px;
+    border: 1px solid #fff;
     font-family: 'Open Sans', sans-serif;
     padding-left: 20px;
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.15);
+      opacity: 1;
+    }
   }
   &__textarea {
     width: 100%;
     background-color: #fff;
-    color: rgba(0, 0, 0, 0.15);
+    color: rgba(10, 30, 56, 0.8);
     border-radius: 5px;
     height: 170px;
     border: none;
     font-family: 'Open Sans', sans-serif;
     padding-left: 20px;
     padding-top: 10px;
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.15);
+      opacity: 1;
+    }
   }
   &__button {
     margin: 0 auto;
     width: 144px;
     padding-top: 20px;
+  }
+  &__error {
+    font-size: 12px;
+    color: #EB5757;
+    position: absolute;
+    &_active {
+      right: -100px;
+      top: 12px;
+      line-height: 20px;
+      padding-left: 25px;
+      background-image: url(../img/error.svg);
+      background-repeat: no-repeat;
+      background-position: center left;
+    }
   }
 }
