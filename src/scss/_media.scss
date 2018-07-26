@@ -241,7 +241,7 @@
   .box__wrapper_part .box__item_l .box__li, 
   .box__wrapper_part .box__item_z .box__li{
     text-align: left;
-    border-left: 2px solid $color_blue;
+    // border-left: 2px solid $color_blue;
     padding-left: 5px;
   }
   .box__caption {
@@ -368,6 +368,7 @@
   .header__navigation_fixed {
     height: 58px;
     position: fixed;
+    max-width: 100%;
     z-index: 10;
     background-color: #fff;
   }

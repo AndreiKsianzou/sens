@@ -151,6 +151,12 @@
 
 .phones__left {
   transition: all 0.5s ease 0s;
+  &.er {
+    opacity: 1;
+    &.er_active {
+      transform: translateX(120px);
+    }
+  }
 }
 
 .phones__right {
@@ -158,20 +164,26 @@
   right: 50px;
   bottom: -50px;
   transition: all 0.5s ease 0s;
+  &.er {
+    opacity: 1;
+    &.er_active {
+      transform: translateX(-120px);
+    }
+  }
 }
 
 .macbook_left {
-  margin-left: -40px;
+  // margin-left: -40px;
   transition: all 0.5s ease 0s;
 }
 
 .macbook_right {
-  margin-left: 70px;
+  // margin-left: 70px;
   transition: all 0.5s ease 0s;
 }
 
 .iphone_left {
-  margin-left: -100px;
+  // margin-left: -100px;
   transition: all 0.5s ease 0s;
 }
 

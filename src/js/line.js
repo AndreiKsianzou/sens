@@ -41,7 +41,7 @@ export function drawLines() {
             setTimeout(() => {
               elem.classList.add('step-line__item_active');
               el_line.style.height = getCoords(elem).top - el_top + 10 + 'px';
-            }, 700*i);
+            }, 400*i);
             i++;
           }
         });

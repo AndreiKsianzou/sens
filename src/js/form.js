@@ -37,8 +37,12 @@ export function submitForm(form) {
   validationForm(form);
   let allFormInputs = form.querySelectorAll('.form__item_req');
   let noErrorInputs = form.querySelectorAll('.form__item_no-error');
+  let formInputs = form.querySelectorAll('.form__req');
   if (allFormInputs.length <= noErrorInputs.length) {
     sendMessage(form);
+    formInputs.forEach((input) => {
+      input.value = '';
+    });
   }
 }
 
