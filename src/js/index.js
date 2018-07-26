@@ -14,6 +14,7 @@ function closeTitle() {
   let window_width = document.documentElement.clientWidth;
   if (window_width <= 600) {
     let part_items = document.querySelectorAll('.box__wrapper_part');
+    part_items = Array.prototype.slice.call(part_items);
     part_items.forEach((part) => {
       let part_title = part.querySelector('.box__title-wrap');
       let part_title_clone = part_title.cloneNode(true);
@@ -62,6 +63,7 @@ form.addEventListener('submit', (e) => {
 });
 
 let formItems = form.querySelectorAll('.form__item_req');
+formItems = Array.prototype.slice.call(formItems);
 formItems.forEach((item) => {
   let input = item.querySelector('.form__req');
   let inputValue = input.value;

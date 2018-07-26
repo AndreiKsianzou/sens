@@ -25,23 +25,25 @@ export function drawLines() {
   window.addEventListener('scroll', (e) => {
     let window_height = document.documentElement.clientHeight;
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    step_line = Array.prototype.slice.call(step_line);
     step_line.forEach((el) => {
       let el_top = getCoords(el).top;
       let el_height = el.clientHeight - 55;
       let el_line = el.querySelector('.step-line__points');
       let el_title = el.querySelector('.step-line__title');
       let el_items = el.querySelectorAll('.step-line__item');
-      if (scrollTop + 0.7*window_height >= el_top /* && scrollTop + 0.7*window_height < el_top + el_height */) {
+      if (scrollTop + 0.9*window_height >= el_top /* && scrollTop + 0.7*window_height < el_top + el_height */) {
         if (!el_title.classList.contains('step-line__title_active')) {
           el_title.classList.add('step-line__title_active');
         }
         let i = 1;
+        el_items = Array.prototype.slice.call(el_items);
         el_items.forEach((elem) => {
           if (!elem.classList.contains('step-line__item_active') /*&& (scrollTop - el_top + 0.7*window_height) >= getCoords(elem).top - el_top + 10*/) {
             setTimeout(() => {
               elem.classList.add('step-line__item_active');
               el_line.style.height = getCoords(elem).top - el_top + 10 + 'px';
-            }, 400*i);
+            }, 250*i);
             i++;
           }
         });

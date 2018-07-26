@@ -5,6 +5,7 @@ function efRun(ef_items) {
   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   let winPart = 0.7*window_height;
   let topPart = 0.7*window_height;
+  ef_items = Array.prototype.slice.call(ef_items);
   ef_items.forEach((element) => {
     let ef_val = element.getAttribute('data-x');
     let ef_top = getCoords(element).top;
@@ -34,6 +35,7 @@ export function erStart() {
     let window_height = document.documentElement.clientHeight;
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     let topPart = 0.7*window_height;
+    er_items = Array.prototype.slice.call(er_items);
     er_items.forEach((element) => {
       let er_top = getCoords(element).top;
       if (scrollTop + topPart >= er_top) {

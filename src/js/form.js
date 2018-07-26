@@ -1,6 +1,8 @@
 function validationForm(form) {
   let formInputs = form.querySelectorAll('.form__item_req');
+  formInputs = Array.prototype.slice.call(formInputs);
   formInputs.forEach((item) => {
+    
     let input = item.querySelector('.form__req');
     let inputName = input.getAttribute('name');
     let inputValue = input.value;
@@ -40,6 +42,7 @@ export function submitForm(form) {
   let formInputs = form.querySelectorAll('.form__req');
   if (allFormInputs.length <= noErrorInputs.length) {
     sendMessage(form);
+    formInputs = Array.prototype.slice.call(formInputs);
     formInputs.forEach((input) => {
       input.value = '';
     });
